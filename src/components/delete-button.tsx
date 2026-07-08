@@ -18,7 +18,8 @@ export default function DeleteButton({ id, title }: DeleteButtonProps) {
       return;
     }
 
-    startTransition(async () => {
+    if (window.location.pathname !== '/') {
+      // On detail page: delete, navigate to dashboard, and refresh
       try {
         const res = await fetch(`/api/work-orders/${id}`, {
           method: 'DELETE',
@@ -30,13 +31,32 @@ export default function DeleteButton({ id, title }: DeleteButtonProps) {
           return;
         }
 
-        // Successfully deleted, refresh page to get updated server-side state
-        router.refresh();
+        router.push('/');
       } catch (error) {
         console.error('Delete error:', error);
         alert('An unexpected error occurred while deleting the work order.');
       }
-    });
+    } else {
+      // On dashboard: run in transition to show spinner and refresh list
+      startTransition(async () => {
+        try {
+          const res = await fetch(`/api/work-orders/${id}`, {
+            method: 'DELETE',
+          });
+
+          if (!res.ok) {
+            const data = await res.json();
+            alert(data.error || 'Failed to delete work order.');
+            return;
+          }
+
+          router.refresh();
+        } catch (error) {
+          console.error('Delete error:', error);
+          alert('An unexpected error occurred while deleting the work order.');
+        }
+      });
+    }
   };
 
   return (
