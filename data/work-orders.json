@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ca44701a-7442-4a4d-91ac-310a01e9d5a6",
+    "title": "Repair Server Rack Cooling Fans",
+    "description": "The primary cooling fan unit on Server Rack B4 is making loud grinding noises and has dropped to 30% RPM. Please replace the fan assembly and verify airflow diagnostics.",
+    "priority": "High",
+    "status": "In Progress",
+    "updatedAt": "2026-07-08T05:54:23.371Z"
+  },
+  {
+    "id": "8bd35019-56b7-4bae-80a0-165afac75310",
+    "title": "Office Desk Power Outlet Installation",
+    "description": "Install a quad power outlet under the new desks in Room 204. Ensure wires are channeled through desk cable management trays and tested for load limits.",
+    "priority": "Medium",
+    "status": "Open",
+    "updatedAt": "2026-07-07T07:54:23.372Z"
+  },
+  {
+    "id": "16c5aa4e-236a-4f85-b81f-7eaee3011a6b",
+    "title": "Replace Lobby Fluorescent Tube Lights",
+    "description": "Three tube lights in the main lobby ceiling are flickering. Replace with energy-efficient T8 LED tube lights and recycle the old tubes.",
+    "priority": "Low",
+    "status": "Done",
+    "updatedAt": "2026-07-06T07:54:23.372Z"
+  },
+  {
+    "id": "5ddfee0b-b2e9-4233-9ed4-e8a9f67f49d0",
+    "title": "Upgrade Network Switch Firmware",
+    "description": "Upgrade the core stack switches to firmware version 15.2.4 during the scheduled maintenance window (Saturday 2 AM). Perform config backup before applying updates.",
+    "priority": "High",
+    "status": "Open",
+    "updatedAt": "2026-07-08T02:54:23.372Z"
+  },
+  {
+    "id": "2415d95e-0e20-40c3-b1ce-b0bbafb7b694",
+    "title": "Conference Room Projector Calibration",
+    "description": "The projector in Conference Room A has a color misalignment (red shadow). Please calibrate the lenses and reset display settings to default.",
+    "priority": "Medium",
+    "status": "Open",
+    "updatedAt": "2026-07-08T07:54:23.372Z"
+  }
+]
